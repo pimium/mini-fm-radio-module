@@ -1,0 +1,374 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title "Micro FM Radio Receiver"
+Date "2020-12-27"
+Rev "1.0.0"
+Comp "SRIKit"
+Comment1 "KT0005"
+Comment2 "Dilshan R Jayakody"
+Comment3 "https://github.com/srikit/mini-fm-radio-module"
+Comment4 "https://srikit.net"
+$EndDescr
+$Sheet
+S 7450 1550 2500 1250
+U 5FE6CC83
+F0 "MCU-Radio" 50
+F1 "MCU-Radio.sch" 50
+$EndSheet
+Text GLabel 4050 4050 0    50   Input ~ 0
+AF-LEFT
+$Comp
+L Device:CP1 C103
+U 1 1 5FE88248
+P 4350 4050
+F 0 "C103" V 4602 4050 50  0000 C CNN
+F 1 "4.7MFD" V 4511 4050 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 4350 4050 50  0001 C CNN
+F 3 "~" H 4350 4050 50  0001 C CNN
+	1    4350 4050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP1 C104
+U 1 1 5FE889F3
+P 4350 4550
+F 0 "C104" V 4602 4550 50  0000 C CNN
+F 1 "4.7MFD" V 4511 4550 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 4350 4550 50  0001 C CNN
+F 3 "~" H 4350 4550 50  0001 C CNN
+	1    4350 4550
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4050 4550 0    50   Input ~ 0
+AF-RIGHT
+$Comp
+L Connector_Generic:Conn_01x03 J102
+U 1 1 5FE89328
+P 5350 4300
+F 0 "J102" H 5430 4342 50  0000 L CNN
+F 1 "AF-OUT" H 5430 4251 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5350 4300 50  0001 C CNN
+F 3 "~" H 5350 4300 50  0001 C CNN
+	1    5350 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5FE89840
+P 5100 4700
+F 0 "#PWR0112" H 5100 4450 50  0001 C CNN
+F 1 "GND" H 5105 4527 50  0000 C CNN
+F 2 "" H 5100 4700 50  0001 C CNN
+F 3 "" H 5100 4700 50  0001 C CNN
+	1    5100 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4550 4200 4550
+Wire Wire Line
+	4050 4050 4200 4050
+Wire Wire Line
+	5000 4050 5000 4200
+Wire Wire Line
+	5000 4200 5150 4200
+Wire Wire Line
+	4500 4050 5000 4050
+Wire Wire Line
+	4500 4550 5000 4550
+Wire Wire Line
+	5000 4550 5000 4400
+Wire Wire Line
+	5000 4400 5150 4400
+Wire Wire Line
+	5100 4700 5100 4300
+Wire Wire Line
+	5100 4300 5150 4300
+$Sheet
+S 7450 3300 2500 1250
+U 5FE73D48
+F0 "display-driver" 50
+F1 "display-driver.sch" 50
+$EndSheet
+$Comp
+L Regulator_Linear:AMS1117-3.3 U101
+U 1 1 5FEF5358
+P 3700 1900
+F 0 "U101" H 3700 2142 50  0000 C CNN
+F 1 "AMS1117-3.3" H 3700 2051 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 3700 2100 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 3800 1650 50  0001 C CNN
+	1    3700 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J101
+U 1 1 5FEF5940
+P 1450 1900
+F 0 "J101" H 1368 2117 50  0000 C CNN
+F 1 "DC-IN" H 1368 2026 50  0000 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical" H 1450 1900 50  0001 C CNN
+F 3 "~" H 1450 1900 50  0001 C CNN
+	1    1450 1900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C101
+U 1 1 5FEF6C27
+P 2250 2200
+F 0 "C101" H 2365 2246 50  0000 L CNN
+F 1 "47MFD" H 2365 2155 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2250 2200 50  0001 C CNN
+F 3 "~" H 2250 2200 50  0001 C CNN
+	1    2250 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C102
+U 1 1 5FEF729D
+P 2900 2200
+F 0 "C102" H 3015 2246 50  0000 L CNN
+F 1 "0.1MFD" H 3015 2155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2938 2050 50  0001 C CNN
+F 3 "~" H 2900 2200 50  0001 C CNN
+	1    2900 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C105
+U 1 1 5FEF88EE
+P 4400 2200
+F 0 "C105" H 4515 2246 50  0000 L CNN
+F 1 "22MFD" H 4515 2155 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 4400 2200 50  0001 C CNN
+F 3 "~" H 4400 2200 50  0001 C CNN
+	1    4400 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C106
+U 1 1 5FEF8EC8
+P 5100 2200
+F 0 "C106" H 5215 2246 50  0000 L CNN
+F 1 "0.1MFD" H 5215 2155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5138 2050 50  0001 C CNN
+F 3 "~" H 5100 2200 50  0001 C CNN
+	1    5100 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 1900 2250 1900
+$Comp
+L power:GND #PWR0105
+U 1 1 5FEFDD99
+P 1800 2500
+F 0 "#PWR0105" H 1800 2250 50  0001 C CNN
+F 1 "GND" H 1805 2327 50  0000 C CNN
+F 2 "" H 1800 2500 50  0001 C CNN
+F 3 "" H 1800 2500 50  0001 C CNN
+	1    1800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5FEFE17C
+P 2250 2500
+F 0 "#PWR0106" H 2250 2250 50  0001 C CNN
+F 1 "GND" H 2255 2327 50  0000 C CNN
+F 2 "" H 2250 2500 50  0001 C CNN
+F 3 "" H 2250 2500 50  0001 C CNN
+	1    2250 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5FEFE50B
+P 2900 2500
+F 0 "#PWR0108" H 2900 2250 50  0001 C CNN
+F 1 "GND" H 2905 2327 50  0000 C CNN
+F 2 "" H 2900 2500 50  0001 C CNN
+F 3 "" H 2900 2500 50  0001 C CNN
+	1    2900 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5FEFE8E7
+P 3700 2500
+F 0 "#PWR0109" H 3700 2250 50  0001 C CNN
+F 1 "GND" H 3705 2327 50  0000 C CNN
+F 2 "" H 3700 2500 50  0001 C CNN
+F 3 "" H 3700 2500 50  0001 C CNN
+	1    3700 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5FEFECD8
+P 4400 2500
+F 0 "#PWR0111" H 4400 2250 50  0001 C CNN
+F 1 "GND" H 4405 2327 50  0000 C CNN
+F 2 "" H 4400 2500 50  0001 C CNN
+F 3 "" H 4400 2500 50  0001 C CNN
+	1    4400 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 5FEFF019
+P 5100 2500
+F 0 "#PWR0114" H 5100 2250 50  0001 C CNN
+F 1 "GND" H 5105 2327 50  0000 C CNN
+F 2 "" H 5100 2500 50  0001 C CNN
+F 3 "" H 5100 2500 50  0001 C CNN
+	1    5100 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 2000 1800 2000
+Wire Wire Line
+	1800 2000 1800 2500
+Wire Wire Line
+	2250 2050 2250 1900
+Connection ~ 2250 1900
+Wire Wire Line
+	2250 1900 2900 1900
+Wire Wire Line
+	2900 2050 2900 1900
+Connection ~ 2900 1900
+Wire Wire Line
+	2900 1900 3400 1900
+Wire Wire Line
+	2250 2350 2250 2500
+Wire Wire Line
+	2900 2350 2900 2500
+Wire Wire Line
+	4000 1900 4400 1900
+Wire Wire Line
+	5100 1900 5100 2050
+Wire Wire Line
+	4400 2050 4400 1900
+Connection ~ 4400 1900
+Wire Wire Line
+	4400 1900 5100 1900
+Wire Wire Line
+	4400 2350 4400 2500
+Wire Wire Line
+	5100 2350 5100 2500
+Wire Wire Line
+	3700 2200 3700 2500
+$Comp
+L power:+3V3 #PWR0113
+U 1 1 5FF02C47
+P 5100 1700
+F 0 "#PWR0113" H 5100 1550 50  0001 C CNN
+F 1 "+3V3" H 5115 1873 50  0000 C CNN
+F 2 "" H 5100 1700 50  0001 C CNN
+F 3 "" H 5100 1700 50  0001 C CNN
+	1    5100 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 1700 5100 1900
+Connection ~ 5100 1900
+$Comp
+L Mechanical:MountingHole_Pad H101
+U 1 1 5FF117E3
+P 1050 5850
+F 0 "H101" H 1150 5899 50  0000 L CNN
+F 1 "M3-Mouting-Hole" H 1150 5808 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1050 5850 50  0001 C CNN
+F 3 "~" H 1050 5850 50  0001 C CNN
+	1    1050 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5FF11B88
+P 1050 6450
+F 0 "#PWR0104" H 1050 6200 50  0001 C CNN
+F 1 "GND" H 1055 6277 50  0000 C CNN
+F 2 "" H 1050 6450 50  0001 C CNN
+F 3 "" H 1050 6450 50  0001 C CNN
+	1    1050 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 5950 1050 6450
+$Comp
+L Mechanical:MountingHole_Pad H102
+U 1 1 5FF12D3D
+P 2400 5850
+F 0 "H102" H 2500 5899 50  0000 L CNN
+F 1 "M3-Mouting-Hole" H 2500 5808 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 2400 5850 50  0001 C CNN
+F 3 "~" H 2400 5850 50  0001 C CNN
+	1    2400 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5FF12EC1
+P 2400 6450
+F 0 "#PWR0107" H 2400 6200 50  0001 C CNN
+F 1 "GND" H 2405 6277 50  0000 C CNN
+F 2 "" H 2400 6450 50  0001 C CNN
+F 3 "" H 2400 6450 50  0001 C CNN
+	1    2400 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 5950 2400 6450
+$Comp
+L Mechanical:MountingHole_Pad H103
+U 1 1 5FF1574B
+P 3700 5850
+F 0 "H103" H 3800 5899 50  0000 L CNN
+F 1 "M3-Mouting-Hole" H 3800 5808 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 3700 5850 50  0001 C CNN
+F 3 "~" H 3700 5850 50  0001 C CNN
+	1    3700 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H104
+U 1 1 5FF158F4
+P 5050 5850
+F 0 "H104" H 5150 5899 50  0000 L CNN
+F 1 "M3-Mouting-Hole" H 5150 5808 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 5050 5850 50  0001 C CNN
+F 3 "~" H 5050 5850 50  0001 C CNN
+	1    5050 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 5FF158FE
+P 5050 6450
+F 0 "#PWR0115" H 5050 6200 50  0001 C CNN
+F 1 "GND" H 5055 6277 50  0000 C CNN
+F 2 "" H 5050 6450 50  0001 C CNN
+F 3 "" H 5050 6450 50  0001 C CNN
+	1    5050 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5950 5050 6450
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5FF32FCF
+P 2900 1700
+F 0 "#FLG0101" H 2900 1775 50  0001 C CNN
+F 1 "PWR_FLAG" H 2900 1873 50  0000 C CNN
+F 2 "" H 2900 1700 50  0001 C CNN
+F 3 "~" H 2900 1700 50  0001 C CNN
+	1    2900 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1700 2900 1900
+NoConn ~ 3700 5950
+$EndSCHEMATC
