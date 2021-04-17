@@ -1,4 +1,5 @@
 # FM stereo receiver module
+![KT0005](https://img.shields.io/badge/ID-KT0005-orange)
 
 ![KT0005](https://raw.githubusercontent.com/srikit/mini-fm-radio-module/main/resources/images/fm-stereo-module-front-small.jpg)
 
