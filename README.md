@@ -2,7 +2,7 @@
 
 ![KT0005](https://raw.githubusercontent.com/srikit/mini-fm-radio-module/main/resources/images/fm-stereo-module-front-small.jpg)
 
-This is an RDA5807 based FM stereo radio module. This module is designed to replace old, low-voltage, analog FM stereo radio receiver modules. Like many digital receivers, this module also got auto scanning, station memory, and digital volume control. This module can driver using 5V to 9V DC power source.
+This is an RDA5807 based FM stereo radio module. This module is designed to replace old, low-voltage, analog FM stereo receiver modules. Like many digital receivers, this module also got auto scanning, station memory, and digital volume control. This module can driver using 5V to 9V DC power source.
 
 The frequency range of the receiver is 88MHz to 108MHz. The auto scanner of this module can tune the receiver with 25kHz increments in up and down directions. 
 
