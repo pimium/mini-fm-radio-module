@@ -11,7 +11,7 @@ The memory manager available with the current firmware can hold up to 10 station
 
 AF output power of this module is not sufficient to handle the pair of speakers. To drive speakers, this module needs to pair with a stereo AF power amplifier kit/module.
 
-This is an open-source hardware project. All the design files, documentation, and firmware source code are available to download at the project source repository. Content of this project is distributed under the terms of the following license:
+This is an open-source hardware project. All the design files, [documentation](https://github.com/srikit/mini-fm-radio-module/wiki), and firmware source code are available to download at the [project source repository](https://github.com/srikit/mini-fm-radio-module). Content of this project is distributed under the terms of the following license:
 
  - Hardware License: [CERN-OHL-W](https://opensource.org/CERN-OHL-W)
  - Software License: [GNU GPL 3.0](https://github.com/srikit/mini-fm-radio-module/blob/main/LICENSE)
